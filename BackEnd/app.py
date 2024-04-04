@@ -5,10 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "http://localhost:5000"}}) 
-conn=mysql.connector.connect(host="localhost",
-    user="root",
-    password="jiya",
-    database="CodeYugam")
+conn=mysql.connector.connect(host="localhost",user="root",password="jiya",database="codeyugam")
 
 cursor=conn.cursor()
 
@@ -29,4 +26,4 @@ def login():
         return jsonify({'message': 'Invalid username or password'}), 401
 
 if __name__ == '__main__':
-    app.run(debug=True,host=5000)
+    app.run(debug=True,port=5000)
