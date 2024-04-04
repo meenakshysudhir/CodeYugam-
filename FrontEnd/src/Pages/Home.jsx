@@ -23,6 +23,7 @@ const Home = () => {
     return (
         <div className='Home'>
             <div className="loginCard">
+                <h2 className="Heading">Login</h2>
                 <form onSubmit={handleSubmit} className='login'>
                 <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
                 <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
