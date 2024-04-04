@@ -11,7 +11,7 @@ const Home = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-        const response = await axios.post('http://localhost:127.0.0.1', { username, password });
+        const response = await axios.post('http://127.0.0.1:5000', { username, password });
         console.log('Login successful:', response.data);
         // Redirect or show success message
         } catch (error) {
