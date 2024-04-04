@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Russo+One&family=Silkscreen:wght@400;700&display=swap');
+
 *{
     box-sizing: border-box;
     margin:0;
@@ -5,6 +7,7 @@
 }
 body{
     background-color: black;
+    font-family: 'EB Garamond','sans-serif';
 }
 .Home{
     display: flex;
@@ -13,12 +16,18 @@ body{
     height:100vh;
     margin:10px;
 }
+/* .borderDiv{
+    border-color: white;
+    height:90vh;
+    width:500px;
+    padding:20px;
+} */
 .loginCard{
     display: flex;
     flex-direction: column;
     height:80vh;
     width:400px;
-    padding:20px;
+    padding:20px;   
     /*   */
     /* align-items:flex-start; */
     background-color:white  ;
@@ -26,11 +35,17 @@ body{
     align-items:center;
     border-radius: 5%;
     /* box-shadow: inset   ; */
+    box-shadow: 5px 5px 5px rgb(177, 8, 8);
 }
 .Heading 
 {
     height:5vh;
+    font-size: 40px;
+    padding:20px;
 }
+/* .Headinf:hover{
+    background-color: ;
+} */
 .login{
     display:flex;
     height:60vh;
@@ -46,15 +61,23 @@ body{
     border-radius: 20px;
 } */
 input{
-    border-radius: 5px;
+    border-radius: 7px;
     height: 7vh;  
     padding:2px;    
-    font-size: 20px;
-    
+    font-size: 23px;
+    width:250px;
+    font-family: 'EB Garamond','sans-serif';
 }
 .loginBtn{
     width:200px;
-    height:5vh;
-    border-radius:20px;  
+    height:6vh; 
+    border-radius:20px; 
+    font-size: 25px; 
+    font-family: 'EB Garamond','sans-serif';
+    cursor: pointer;
 
+}
+.loginBtn:hover{
+    background-color: black;
+    color:white;
 }
