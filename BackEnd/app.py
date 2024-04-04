@@ -4,7 +4,7 @@ from flask_cors import CORS
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}}) 
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:5000"}}) 
 conn=mysql.connector.connect(host="localhost",
     user="root",
     password="jiya",
