@@ -12,7 +12,7 @@ conn=mysql.connector.connect(host="localhost",
 
 cursor=conn.cursor()
 
-@app.route('/api/login', methods=['POST'])
+@app.route('/', methods=['POST'])
 def login():
     data = request.json
     username = data.get('username')
@@ -23,10 +23,10 @@ def login():
     cursor.execute(query, (username,))
     user = cursor.fetchone()
 
-    if user and check_password_hash(user[2], password):  # Assuming password is hashed in the database
+    if user and check_password_hash(user[1], password):  # Assuming password is hashed in the database
         return jsonify({'message': 'Login successful'}), 200
     else:
         return jsonify({'message': 'Invalid username or password'}), 401
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,host=5000)
